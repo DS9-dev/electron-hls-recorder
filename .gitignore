@@ -1,0 +1,15 @@
+node_modules/
+dist/
+backup/
+.idea/
+.vscode/
+*.log
+bin/*.exe
+tests/ui-preview*.png
+.env
+.env.*
+!.env.example
+*.mkv
+*.mp4
+*.ts
+*.tmp

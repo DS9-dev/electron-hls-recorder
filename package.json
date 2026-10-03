@@ -1,0 +1,62 @@
+{
+  "name": "electron-hls-recorder",
+  "version": "1.0.7",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "dev.ds9.hlsrecorder",
+    "productName": "HLS Recorder",
+    "asar": true,
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "hls.js",
+      "stream-groups.js",
+      "renderer.js",
+      "index.html",
+      "styles.css",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "bin/ffmpeg.exe",
+        "to": "ffmpeg.exe"
+      },
+      {
+        "from": "extension",
+        "to": "extension"
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  },
+  "keywords": [],
+  "author": "DS9-dev",
+  "license": "ISC",
+  "description": "Desktop HLS stream recorder with browser extension",
+  "devDependencies": {
+    "electron": "^39.2.7",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "execa": "^9.6.1",
+    "express": "^5.2.1",
+    "m3u8-parser": "^7.2.0",
+    "node-fetch": "^2.7.0"
+  }
+}

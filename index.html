@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Electron HLS Recorder</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="titlebar">
+    <div class="window-controls">
+        <button class="window-close" data-window-action="close" aria-label="Закрыть окно" title="Закрыть"><span>×</span></button>
+        <button class="window-minimize" data-window-action="minimize" aria-label="Свернуть окно" title="Свернуть"><span>−</span></button>
+        <button class="window-maximize" data-window-action="maximize" aria-label="Развернуть или восстановить окно" title="Развернуть / восстановить"><span>↗</span></button>
+    </div>
+    <div class="app-title">HLS Recorder</div>
+    <button class="theme-toggle" id="theme-toggle" title="Сменить тему">🌙 Dark</button>
+</header>
+<main>
+<div class="page-heading"><div><div class="eyebrow">ВАША КОЛЛЕКЦИЯ</div><h2>Трансляции <span id="stream-count">0</span></h2></div><span class="heading-note">Сохраняйте то, что смотрите</span></div>
+
+<div id="streams"></div>
+
+<div class="logs-toolbar"><h3 class="logs-header" id="logs-header">Журнал событий</h3>
+<button id="copy-logs">Копировать логи</button>
+</div>
+<div id="logs"></div>
+</main>
+
+<script src="renderer.js"></script>
+</body>
+</html>
+
